@@ -24,15 +24,13 @@ button{
 }
 ​
 .signupForm.name{
-    
-    align-items: column;
-    
+    flex-flow: column;
 }
 ​
 .signupForm.password{
-    flex-direction: column;
+    flex-flow: column;
 }
 ​
 .signupForm.email{
-    flex-direction: column;
+    flex-flow: column;
 }
