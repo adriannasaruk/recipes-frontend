@@ -21,7 +21,15 @@ button {
   flex-wrap: wrap;
   align-items: center;
 }
+input[type=text]:focus {
+    background-color: #b5d7cf;
+    transition: width 0.4s ease-in-out;
+  }
+input[type=text]:focus {
+    width: 100%;
+  }  
 .signupForm.name{
+    display: flex;
     flex-flow: column;
 }
 .signupForm.password{
