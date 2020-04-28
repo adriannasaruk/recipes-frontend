@@ -75,7 +75,6 @@ const Signup = props => {
                     });
                   })
                   .catch(err => console.log(err.response));
-        
     }
     
         return( 
