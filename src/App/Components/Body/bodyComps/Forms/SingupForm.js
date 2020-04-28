@@ -8,7 +8,7 @@ import "./singup.css"
 const formSchema = yup.object().shape({
     name: yup.string().required("What's your name?").min(4,'Name must be at least 4 characters'),
     email: yup.string().required("The email address you supplied is invalid."),
-    password: yup.string().required("Password must contain at least 6 characters.").min(6,'Your password is too short.'),
+    password: yup.string().required("Enter a password to continue.").min(6,'Your password is too short.'),
     terms:yup.boolean().oneOf([true], "Please agree to the terms of use"),
 });
 
