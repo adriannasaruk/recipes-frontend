@@ -82,7 +82,7 @@ const Signup = props => {
     <div className="signupForm">           
     <form onSubmit={submitForm}>
     
-    <Link to={`/`} >Home</Link>
+    <Link to={`/`} ></Link>
     
         <label htmlFor="name">Name: {error.name.length > 0 ? <p className="error">{error.name}</p> : null} </label>
             <input 
