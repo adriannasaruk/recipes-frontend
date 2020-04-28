@@ -106,7 +106,7 @@ const Signup = (props) => {
         <label htmlFor='password' className='label pass-label'>
           <input
             id='password'
-            type='text'
+            type='password'
             name='password'
             onChange={inputChange}
             placeholder='Password'
@@ -133,14 +133,15 @@ const Signup = (props) => {
             <p className='error'>{error.email}</p>
           ) : null}
         </label>
-        <label htmlFor='terms'>
+        <label htmlFor='terms' className='tos-label'>
           <input
             type='checkbox'
             name='terms'
+            className='tos'
             onChange={inputChange}
             checked={information.terms}
           />
-          Agree to TOS.
+          <p className='tos-text'>Agree to TOS.</p>
         </label>
         <button disabled={disable} type='submit'>
           Sign Up
