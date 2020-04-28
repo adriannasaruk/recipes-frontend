@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-bar {
+  width: 100%;
+  height: 40px;
+  background-color: #787266;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+  list-style: none;
+}
+
+.navbar-nav .left,
+.right {
+  display: flex;
+  width: 15%;
+  justify-content: space-evenly;
+}
+
+.navbar-nav ul li .link {
+  color: white;
+}
