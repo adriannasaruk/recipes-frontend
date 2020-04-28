@@ -30,9 +30,13 @@ export default function Nav(props) {
         </section>
         <section className='right'>
           <li>
-            <Link style={styles.link} to='/login'>
-              Login
-            </Link>
+            {token ? (
+              <Link to='/home'>Logout</Link>
+            ) : (
+              <Link style={styles.link} to='/login'>
+                Login
+              </Link>
+            )}
           </li>
           {!token ? (
             <li>
