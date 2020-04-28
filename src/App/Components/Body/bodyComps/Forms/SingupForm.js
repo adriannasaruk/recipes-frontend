@@ -2,13 +2,13 @@ import React, {useState, useEffect} from "react";
 import * as yup from "yup";
 import axios from "axios";
 import { Link } from 'react-router-dom'
-
+import "./singup.css"
 
 
 const formSchema = yup.object().shape({
     name: yup.string().required("What's your name?").min(4,'Name must be at least 4 characters'),
-    email: yup.string().required("Please enter a valid email."),
-    password: yup.string().required("Password must contain at least 6 characters.").min(6,'Password must contain at least 6 characters.'),
+    email: yup.string().required("The email address you supplied is invalid."),
+    password: yup.string().required("Password must contain at least 6 characters.").min(6,'Your password is too short.'),
     terms:yup.boolean().oneOf([true], "Please agree to the terms of use"),
 });
 
@@ -84,7 +84,7 @@ const Signup = props => {
     
     <Link to={`/`} ></Link>
     
-        <label htmlFor="name">Name: {error.name.length > 0 ? <p className="error">{error.name}</p> : null} </label>
+        <label htmlFor="name">{error.name.length > 0 ? <p className="error">{error.name}</p> : null} </label>
             <input 
                 id="name" 
                 type="text" 
@@ -93,7 +93,7 @@ const Signup = props => {
                 placeholder="Name"
                 value={information.name} required/>
             
-        <label htmlFor="password">Password: {error.password.length > 0 ? (<p className="error">{error.password}</p>) : null} </label> 
+        <label htmlFor="password">{error.password.length > 0 ? (<p className="error">{error.password}</p>) : null} </label> 
             <input
                 id="password" 
                 type="text" 
@@ -102,7 +102,7 @@ const Signup = props => {
                 placeholder="Password"
                 value={information.password} required/>
     
-        <label htmlFor="email">Email: {error.email.length > 0 ? (<p className="error">{error.email}</p>) : null}</label>    
+        <label htmlFor="email">{error.email.length > 0 ? (<p className="error">{error.email}</p>) : null}</label>    
             <input id="email" 
                 type="text" 
                 name="email" 
@@ -116,7 +116,7 @@ const Signup = props => {
                 name="terms"
                 onChange={inputChange}
                 checked={information.terms} />
-                Terms of service
+                By clicking on Sign up, you agree to the Terms and Conditions of Use. 
 
         <button disabled={disable} type="submit">Sign Up</button>
     
