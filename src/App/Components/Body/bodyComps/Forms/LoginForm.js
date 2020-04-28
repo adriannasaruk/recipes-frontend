@@ -3,7 +3,7 @@ import React, {useState} from "react";
 
 const loginForm = props => {
 const [box, setBox] = useState({
-    Email: '',
+    email: '',
     password: '',
 });
 
@@ -20,10 +20,10 @@ const submitForm = event => {
     return(     
 <form onSubmit={submitForm}>
     
-    <label htmlFor="Email">Email: </label>
-        <input id="Email" 
+    <label htmlFor="email">Email: </label>
+        <input id="email" 
             type="text" 
-            name="Email" 
+            name="email" 
             onChange={handleChanges}
             placeholder="Email"
             value={box.email}
