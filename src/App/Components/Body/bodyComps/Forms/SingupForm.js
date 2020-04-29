@@ -143,7 +143,7 @@ const Signup = (props) => {
           />
           <p className='tos-text'>Agree to TOS.</p>
         </label>
-        <button disabled={disable} type='submit'>
+        <button className='signup-btn' disabled={disable} type='submit'>
           Sign Up
         </button>
       </form>

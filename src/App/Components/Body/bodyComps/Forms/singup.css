@@ -1,7 +1,7 @@
 body {
   background-color: #e2e3d8;
 }
-button {
+.signup-btn {
   background-color: #b5d7cf;
   border: none;
   color: white;
