@@ -1,35 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import * as yup from 'yup';
-import axios from 'axios';
+import { axiosWithAuth } from '../../../../../Utils/axiosWithAuth';
 
 import './singup.css';
 
 const formSchema = yup.object().shape({
-  name: yup
+  username: yup
     .string()
     .required("What's your name?")
     .min(4, 'Name must be at least 4 characters'),
-  email: yup.string().required('The email address you supplied is invalid.'),
   password: yup
     .string()
     .required('Enter a password to continue.')
     .min(6, 'Your password is too short.'),
-  terms: yup.boolean().oneOf([true], 'Please agree to the terms of use'),
 });
 
 const Signup = (props) => {
   const [disable, setDisable] = useState(false);
   const [information, setInformation] = useState({
-    name: '',
+    username: '',
     password: '',
-    email: '',
-    terms: '',
   });
   const [error, setError] = useState({
-    name: '',
+    username: '',
     password: '',
-    email: '',
-    terms: '',
   });
 
   const [post, setPost] = useState([]);
@@ -61,28 +55,20 @@ const Signup = (props) => {
     event.persist();
     const newFormData = {
       ...information,
-      [event.target.name]:
-        event.target.type === 'checkbox'
-          ? event.target.checked
-          : event.target.value,
+      [event.target.name]: event.target.value,
     };
     setInformation(newFormData);
     validateChange(event);
   };
   const submitForm = (event) => {
     event.preventDefault();
-    axios
-      .post('https://reqres.in/api/users', information)
+    axiosWithAuth()
+      .post(
+        'https://secretfamilyrecipes1.herokuapp.com/api/auth/register',
+        information
+      )
       .then((res) => {
-        setPost(res.data);
-        console.log('success', post);
-
-        setInformation({
-          name: '',
-          password: '',
-          email: '',
-          terms: '',
-        });
+        console.log({ res });
       })
       .catch((err) => console.log(err.response));
   };
@@ -90,18 +76,21 @@ const Signup = (props) => {
   return (
     <div className='signupForm'>
       <form onSubmit={submitForm}>
-        <label htmlFor='name' className='label name-label'>
+        <h3>Signup</h3>
+        <label htmlFor='username' className='label name-label'>
           <input
-            id='name'
+            id='username'
             type='text'
-            name='name'
+            name='username'
             onChange={inputChange}
             placeholder='Name'
             className='name'
-            value={information.name}
+            value={information.username}
             required
           />
-          {error.name.length > 0 ? <p className='error'>{error.name}</p> : null}{' '}
+          {error.username.length > 0 ? (
+            <p className='error'>{error.username}</p>
+          ) : null}{' '}
         </label>
         <label htmlFor='password' className='label pass-label'>
           <input
@@ -118,29 +107,8 @@ const Signup = (props) => {
             <p className='error'>{error.password}</p>
           ) : null}{' '}
         </label>
-        <label htmlFor='email' className='label email-label'>
-          <input
-            id='email'
-            type='text'
-            className='email'
-            name='email'
-            onChange={inputChange}
-            placeholder='Email'
-            value={information.email}
-            required
-          />
-          {error.email.length > 0 ? (
-            <p className='error'>{error.email}</p>
-          ) : null}
-        </label>
         <label htmlFor='terms' className='tos-label'>
-          <input
-            type='checkbox'
-            name='terms'
-            className='tos'
-            onChange={inputChange}
-            checked={information.terms}
-          />
+          <input type='checkbox' name='terms' className='tos' />
           <p className='tos-text'>Agree to TOS.</p>
         </label>
         <button className='signup-btn' disabled={disable} type='submit'>
