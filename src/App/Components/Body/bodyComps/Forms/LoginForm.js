@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './singup.css';
 
 const LoginForm = (props) => {
   const [box, setBox] = useState({
@@ -16,8 +17,9 @@ const LoginForm = (props) => {
   };
 
   return (
+    <div className='signupForm'>
     <form onSubmit={submitForm}>
-      <label htmlFor='Email'>Email: </label>
+      <label htmlFor='Email' className='label email-label'></label>
       <input
         id='Email'
         type='text'
@@ -27,17 +29,18 @@ const LoginForm = (props) => {
         value={box.email}
       />
 
-      <label htmlFor='password'>Password: </label>
+      <label htmlFor='password' className='label pass-label'></label>
       <input
         id='password'
         type='text'
         name='password'
         onChange={handleChanges}
-        placeholder='password'
+        placeholder='Password'
         value={box.password}
       />
       <button type='submit'>Login</button>
     </form>
+    </div>
   );
 };
 

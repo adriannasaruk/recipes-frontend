@@ -1,40 +1,78 @@
 body {
-  background-color: #e2e3d8;
-}
-button {
-  background-color: #b5d7cf;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  display: flex;
-  flex-direction: center;
-}
-.signupForm {
-  display: block;
-  background-color: #9ba596;
-  align-items: center;
-  border-color: #5a4b41;
-  color: #5a4b41;
-  flex-wrap: wrap;
-  align-items: center;
-  
-}
-input[type=text]:focus {
+    background-color: #e2e3d8;
+  }
+  button {
     background-color: #b5d7cf;
-    border-radius: 4px;
-    border: 10%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    display: flex;
+    flex-direction: center;
+  }
+  .signupForm {
+    display: flex;
+    align-items: center;
+    border-color: #b5d7cf;
+    color: #5a4b41;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
-.signupForm.name{
+  
+  input[type='text']:focus,
+  input[type='password']:focus {
+    background-color: #b5d7cf;
+    transition: width 0.4s ease-in-out;
+  }
+  input[type='text']:focus,
+  input[type='password']:focus {
+    width: 100%;
+  }
+  
+  input {
+    padding: 2%;
+    color: #5a4b41;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+  }
+  
+  label {
+    margin-bottom: 5%;
+  }
+  .signupForm {
+    width: 100%;
     display: flex;
-    flex-flow: column;
-}
-.signupForm.password{
-    flex-flow: column;
-}
-.signupForm.email{
-    flex-flow: column;
-}
+    justify-content: center;
+    align-items: center;
+  }
+  .signupForm form {
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+    /* padding: 10%; */
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #9ba596;
+    margin-top: 5%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .tos-label {
+    display: flex;
+    flex-flow: row;
+    width: 35%;
+  
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .tos-text {
+    width: 80%;
+    margin-left: -30%;
+  }
