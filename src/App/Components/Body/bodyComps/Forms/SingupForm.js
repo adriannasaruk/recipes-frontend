@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as yup from 'yup';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+
 import './singup.css';
 
 const formSchema = yup.object().shape({
