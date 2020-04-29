@@ -90,6 +90,7 @@ const Signup = (props) => {
   return (
     <div className='signupForm'>
       <form onSubmit={submitForm}>
+        <h3>Signup</h3>
         <label htmlFor='name' className='label name-label'>
           <input
             id='name'

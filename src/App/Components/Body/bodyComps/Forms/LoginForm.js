@@ -13,33 +13,35 @@ const LoginForm = (props) => {
   const submitForm = (event) => {
     event.preventDefault();
     // props.addNewNote(box);
-    setBox({ email: '', password: '',});
+    setBox({ email: '', password: '' });
   };
 
   return (
     <div className='signupForm'>
-    <form onSubmit={submitForm}>
-      <label htmlFor='email' className='label email-label'></label>
-      <input
-        id='email'
-        type='text'
-        name='email'
-        onChange={handleChanges}
-        placeholder='Email'
-        value={box.email}
-      />
+      <form onSubmit={submitForm}>
+        <label htmlFor='email' className='label email-label'></label>
+        <input
+          id='email'
+          type='text'
+          name='email'
+          onChange={handleChanges}
+          placeholder='Email'
+          value={box.email}
+        />
 
-      <label htmlFor='password' className='label pass-label'></label>
-      <input
-        id='password'
-        type='text'
-        name='password'
-        onChange={handleChanges}
-        placeholder='Password'
-        value={box.password}
-      />
-      <button type='submit'className='signup-btn'>Login</button>
-    </form>
+        <label htmlFor='password' className='label pass-label'></label>
+        <input
+          id='password'
+          type='text'
+          name='password'
+          onChange={handleChanges}
+          placeholder='Password'
+          value={box.password}
+        />
+        <button type='submit' className='signup-btn'>
+          Login
+        </button>
+      </form>
     </div>
   );
 };

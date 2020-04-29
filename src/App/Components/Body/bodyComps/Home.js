@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
 import './home.css';
 import { useHistory } from 'react-router-dom';
+import axios from 'axios';
 
 export default function Home(props) {
   const { push } = useHistory();
@@ -8,7 +10,12 @@ export default function Home(props) {
     e.preventDefault();
     push('/signup');
   };
-
+  useEffect(() => {
+    axios
+      .get('https://secretfamilyrecipes1.herokuapp.com/api/public')
+      .then((res) => console.log({ res }))
+      .catch((err) => console.log({ err }));
+  }, []);
   return (
     <div className='home'>
       <section className='header'>
