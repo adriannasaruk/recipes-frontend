@@ -14,9 +14,9 @@ body {
 }
 
 .signup-btn:hover {
-    color: #b5d7cf;
-    background-color: black;
-  }  
+  color: #b5d7cf;
+  background-color: black;
+}
 .signupForm {
   display: flex;
 
@@ -71,7 +71,6 @@ label {
   width: 35%;
   justify-content: center;
   align-items: center;
-
 }
 /* .tos {
   /* width: 100%; 
