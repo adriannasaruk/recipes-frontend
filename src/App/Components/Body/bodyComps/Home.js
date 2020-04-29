@@ -25,7 +25,6 @@ export default function Home(props) {
         </button>
       </section>
       <section className='top-info'>
-
         <div className='top-img'>
           <img src='salad.jpg' alt='salad' />
         </div>
