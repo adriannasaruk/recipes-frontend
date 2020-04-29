@@ -10,12 +10,6 @@ export default function Home(props) {
     e.preventDefault();
     push('/signup');
   };
-  useEffect(() => {
-    axios
-      .get('https://secretfamilyrecipes1.herokuapp.com/api/public')
-      .then((res) => console.log({ res }))
-      .catch((err) => console.log({ err }));
-  }, []);
   return (
     <div className='home'>
       <section className='header'>
@@ -32,16 +26,30 @@ export default function Home(props) {
         </button>
       </section>
       <section className='top-info'>
-        <div className='top-img'>
-          {/* <img src='salad.jpg' alt='' /> */}
-        </div>
+        <div className='top-img'>{/* <img src='salad.jpg' alt='' /> */}</div>
         <div className='top-para'>
-          <p className='app-info'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p className='app-info'>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </div>
       </section>
       <section className='bottom-info'>
         <div className='bottom-para'>
-          <p className='bottom app-info'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p className='bottom app-info'>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </div>
         <div className='bottom-img'>
           {/* <img src='cake.jpg' alt='cake' /> */}
