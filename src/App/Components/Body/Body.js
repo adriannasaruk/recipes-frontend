@@ -5,6 +5,8 @@ import Signup from './bodyComps/Forms/SingupForm';
 import LoginForm from './bodyComps/Forms/LoginForm';
 import Home from './bodyComps/Home';
 import PubRecipes from './bodyComps/Public Recipes Page/publicRecipes';
+import PrivateRoute from '../../../Utils/PrivateRoute';
+import UserPage from './bodyComps/userpage/userpage';
 
 export default function Body(props) {
   return (
@@ -19,9 +21,10 @@ export default function Body(props) {
         <Route path='/login'>
           <LoginForm />
         </Route>
-        <Route patch='/recipes'>
+        <Route path='/recipes'>
           <PubRecipes />
         </Route>
+        <PrivateRoute exact path='/userpage' component={UserPage} />
       </Switch>
     </div>
   );
