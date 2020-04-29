@@ -14,11 +14,11 @@
   justify-content: center;
   align-items: center;
 }
-/* .header.banner .img{
+ .header.banner .img{
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+} 
 .header .header-info {
   display: flex;
   justify-content: center;
