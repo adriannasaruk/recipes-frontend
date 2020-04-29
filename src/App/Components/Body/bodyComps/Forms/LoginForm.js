@@ -12,18 +12,18 @@ const LoginForm = (props) => {
   };
   const submitForm = (event) => {
     event.preventDefault();
-    props.addNewNote(box);
-    setBox({ email: '', password: '' });
+    // props.addNewNote(box);
+    setBox({ email: '', password: '',});
   };
 
   return (
     <div className='signupForm'>
     <form onSubmit={submitForm}>
-      <label htmlFor='Email' className='label email-label'></label>
+      <label htmlFor='email' className='label email-label'></label>
       <input
-        id='Email'
+        id='email'
         type='text'
-        name='Email'
+        name='email'
         onChange={handleChanges}
         placeholder='Email'
         value={box.email}
@@ -38,7 +38,7 @@ const LoginForm = (props) => {
         placeholder='Password'
         value={box.password}
       />
-      <button type='submit'>Login</button>
+      <button type='submit'className='signup-btn'>Login</button>
     </form>
     </div>
   );

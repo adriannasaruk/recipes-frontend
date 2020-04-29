@@ -14,7 +14,7 @@ export default function Home(props) {
       <section className='header'>
         <div className='banner'>
           Image goes here
-          <img src='' alt='' />
+          {/* <img src='headerimage.jpg' alt='' /> */}
         </div>
         <div className='header-info'>
           <h1>The Silent Cook</h1>
@@ -26,18 +26,18 @@ export default function Home(props) {
       </section>
       <section className='top-info'>
         <div className='top-img'>
-          <img src='' alt='' />
+          {/* <img src='salad.jpg' alt='' /> */}
         </div>
         <div className='top-para'>
-          <p className='app-info'></p>
+          <p className='app-info'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </section>
       <section className='bottom-info'>
         <div className='bottom-para'>
-          <p className='bottom app-info'></p>
+          <p className='bottom app-info'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div className='bottom-img'>
-          <img src='' alt='' />
+          {/* <img src='cake.jpg' alt='cake' /> */}
         </div>
       </section>
     </div>
