@@ -1,29 +1,33 @@
 const initialState = {
   isFetching: false,
   error: '',
-  results: {},
+  results: [],
 };
 
 export const publicReducer = (state = initialState, action) => {
-  console.log('Inside Public Reducer', state);
+  console.log('actions payload', action.payload);
+  // console.log('state', state);
   switch (action.type) {
-    case 'Public_Fetch_Start':
+    case 'User_Recipe_Fetch_Start':
       return {
         ...state,
         isFetching: true,
       };
 
-    case 'Public_Fetch_Success':
+    case 'User_Recipe_Fetch_Success':
+      const recipes = action.payload;
       return {
         ...state,
         isFetching: false,
-        results: action.payload,
+        results: recipes,
       };
-    case 'Public_Fetch_Failure':
+    case 'User_Recipe_Fetch_Failure':
       return {
         ...state,
         isFetching: false,
         error: action.error,
       };
+    default:
+      return state;
   }
 };
