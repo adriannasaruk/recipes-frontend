@@ -43,7 +43,7 @@ const LoginForm = (props) => {
         <label htmlFor='password' className='label pass-label'>
           <input
             id='password'
-            type='text'
+            type='password'
             name='password'
             onChange={handleChanges}
             placeholder='Password'
