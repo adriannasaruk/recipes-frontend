@@ -1,7 +1,11 @@
 body {
   background-color: #e2e3d8;
 }
+<<<<<<< HEAD
 button {
+=======
+.signup-btn {
+>>>>>>> ee71c371e9a96dde59bc4004d776b70306f93f12
   background-color: #b5d7cf;
   border: none;
   color: white;
@@ -11,6 +15,7 @@ button {
   display: inline-block;
   display: flex;
   flex-direction: center;
+<<<<<<< HEAD
   cursor: pointer;
   transition: 0.4s ease-in-out;
 }
@@ -42,6 +47,33 @@ input[type='password']:focus {
   width: 100%;
 }
 
+=======
+}
+
+.signup-btn:hover {
+    color: #b5d7cf;
+    background-color: black;
+  }  
+.signupForm {
+  display: flex;
+
+  align-items: center;
+  border-color: #b5d7cf;
+  color: #5a4b41;
+  flex-wrap: wrap;
+  align-items: center;
+}
+input[type='text']:focus,
+input[type='password']:focus {
+  background-color: #b5d7cf;
+  transition: width 0.4s ease-in-out;
+}
+/* input[type='text']:focus,
+input[type='password']:focus {
+  width: 100%;
+} */
+
+>>>>>>> ee71c371e9a96dde59bc4004d776b70306f93f12
 input {
   padding: 2%;
   color: #5a4b41;
@@ -63,8 +95,12 @@ label {
   display: flex;
   flex-flow: column wrap;
   width: 50%;
+<<<<<<< HEAD
   /* padding: 10%; */
   padding-top: 5%;
+=======
+  padding-top: 2%;
+>>>>>>> ee71c371e9a96dde59bc4004d776b70306f93f12
   padding-bottom: 5%;
   background-color: #9ba596;
   margin-top: 5%;
@@ -76,11 +112,21 @@ label {
   display: flex;
   flex-flow: row;
   width: 35%;
+<<<<<<< HEAD
 
   justify-content: center;
   align-items: center;
 }
 
+=======
+  justify-content: center;
+  align-items: center;
+
+}
+/* .tos {
+  /* width: 100%; 
+} */
+>>>>>>> ee71c371e9a96dde59bc4004d776b70306f93f12
 .tos-text {
   width: 80%;
   margin-left: -30%;

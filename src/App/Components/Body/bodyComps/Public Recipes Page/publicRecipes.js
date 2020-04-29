@@ -18,8 +18,8 @@ function PubRecipes(props) {
   }, []);
   return (
     <div className='public-wrapper'>
-      {recipes.recipes
-        ? recipes.map((recipe) => console.log(recipe.title))
+      {recipes.data.recipes
+        ? recipes.data.recipes.map((recipe) => console.log(recipe.title))
         : null}
     </div>
   );
