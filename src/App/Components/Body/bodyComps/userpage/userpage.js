@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { fetchRecipes } from '../../../../../Utils/store/Actions/recipeActions';
 import { connect } from 'react-redux';
 import UserCard from './userCard';
@@ -7,15 +7,24 @@ import { useHistory } from 'react-router-dom';
 
 function UserPage(props) {
   const { push } = useHistory();
+  const [state, setState] = useState(props.recipes);
+  const [dependency, setDependency] = useState([]);
 
   const addRecipeForm = (e) => {
     push('/addrecipe');
   };
 
+  const reload = () => {
+    window.location.reload();
+  };
+
   useEffect(() => {
+    // reload();
     props.fetchRecipes();
-  }, []);
+  }, [dependency]);
+
   console.log('recipes', props.recipes);
+
   return (
     <>
       <Nav />

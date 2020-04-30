@@ -23,6 +23,7 @@ const LoginForm = (props) => {
         localStorage.setItem('token', JSON.stringify(res.data.token));
         localStorage.setItem('user_id', JSON.stringify(res.data.id));
         push('/userpage');
+        window.location.reload();
       })
       .catch((err) => console.error({ err }));
   };
