@@ -29,26 +29,14 @@ export default function Home(props) {
         </div>
         <div className='top-para'>
           <p className='app-info'>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          Do you have a cookbook that is falling apart because of wear and tear? Or even recipes that are on scatter sheets of paper? Well we got your back. Here at The Silent Cook we have it so that you can put all your recipes in one place.
           </p>
         </div>
       </section>
       <section className='bottom-info'>
         <div className='bottom-para'>
           <p className='bottom app-info'>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          Searching for your own or grandma’s secret recipes can be very time-consuming and frustrating. This app allows you to save all your recipes on your personal dashboard. No more searching for old recipe books and no more reading from page to page. Save your recipes here and make your next cooking or baking experience easier.
           </p>
         </div>
         <div className='bottom-img'>
