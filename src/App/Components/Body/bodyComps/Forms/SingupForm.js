@@ -26,8 +26,6 @@ const Signup = (props) => {
     password: '',
   });
 
-  const [post, setPost] = useState([]);
-
   useEffect(() => {
     formSchema.isValid(information).then((pressed) => {
       setDisable(!pressed);

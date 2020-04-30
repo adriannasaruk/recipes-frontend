@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Playfair+Display:wght@600&family=Roboto&family=Seaweed+Script&display=swap"
-);
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Playfair+Display:wght@600&family=Roboto&family=Seaweed+Script&display=swap');
 
 .home {
   display: flex;
@@ -96,13 +95,13 @@
   padding: 3%;
 }
 
-
 .userpage {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 1;
 }
 .userpage div {
   display: flex;
@@ -155,15 +154,26 @@
   flex-flow: column wrap;
 }
 
-P, button{
+P,
+button {
   font-family: 'Roboto', sans-serif;
-} 
-h1,h2, h3{
-  font-family: 'Seaweed Script', cursive;  
 }
+<<<<<<< HEAD
+h1,
+h2,
+h3 {
+  font-family: 'Seaweed Script', cursive;
+}
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+}
+=======
 h4,h5,h6{
 font-family: 'Playfair Display', serif;
 }
 .header-info h1{
   font-size: 50px;
 }
+>>>>>>> f46364c81c40895a1352f9d25f3ac89311c94392

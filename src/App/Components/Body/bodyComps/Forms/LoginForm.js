@@ -21,6 +21,7 @@ const LoginForm = (props) => {
       .then((res) => {
         console.log({ res });
         localStorage.setItem('token', JSON.stringify(res.data.token));
+        localStorage.setItem('user_id', JSON.stringify(res.data.id));
         push('/userpage');
       })
       .catch((err) => console.error({ err }));

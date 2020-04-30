@@ -1,6 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { axiosWithAuth } from '../../../../../Utils/axiosWithAuth';
 
 function UserCard(props) {
+  console.log(props.recipe);
+  const deleteRecipe = (e) => {
+    axiosWithAuth()
+      .delete(
+        `https://secretfamilyrecipes1.herokuapp.com/api/recipes/${props.recipe.id}`
+      )
+      .then((res) => console.log({ res }))
+      .catch((err) => console.error({ err }));
+  };
+
   return (
     <div className='usercard-wrap'>
       <div className='top-card'>
@@ -14,10 +26,18 @@ function UserCard(props) {
       <div className='inst-wrap'>
         <h4>Instructions: </h4>
         <p> {props.recipe.instructions} </p>
-        <button className='delete btn'>Delete</button>
+        <button onClick={deleteRecipe} className='delete btn'>
+          Delete
+        </button>
       </div>
     </div>
   );
 }
 
-export default UserCard;
+const mapStateToProps = (state) => {
+  return {
+    random: state.publicRecipe,
+  };
+};
+
+export default connect(mapStateToProps, {})(UserCard);
