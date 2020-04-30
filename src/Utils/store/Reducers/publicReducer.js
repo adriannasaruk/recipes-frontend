@@ -1,8 +1,10 @@
 const initialState = {
   isFetching: false,
   error: '',
+  user_id: '',
   results: [],
 };
+const userId = localStorage.getItem('user_id');
 
 export const publicReducer = (state = initialState, action) => {
   console.log('actions payload', action.payload);
@@ -19,6 +21,7 @@ export const publicReducer = (state = initialState, action) => {
       return {
         ...state,
         isFetching: false,
+        user_id: userId,
         results: recipes,
       };
     case 'User_Recipe_Fetch_Failure':

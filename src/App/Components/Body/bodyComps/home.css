@@ -153,3 +153,18 @@
   display: flex;
   flex-flow: column wrap;
 }
+
+P,
+button {
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Seaweed Script', cursive;
+}
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+}
