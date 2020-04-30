@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Playfair+Display:wght@600&family=Roboto&family=Seaweed+Script&display=swap"
+);
+
 .home {
   display: flex;
   flex-flow: column wrap;
@@ -43,7 +46,7 @@
 }
 .banner img {
   width: 100%;
-  height: 400px;
+  height: 600px;
   opacity: 0.9;
   display: flex;
   justify-content: center;
@@ -53,7 +56,7 @@
 .top-info .top-para,
 .top-img {
   width: 40%;
-  border: 1px solid;
+  /* border: 1px solid; */
 }
 
 .top-img img {
@@ -81,7 +84,7 @@
 .bottom-info .bottom-para,
 .bottom-img {
   width: 40%;
-  border: 1px solid;
+  /* border: 1px solid; */
 }
 
 .bottom-img img {
@@ -92,3 +95,15 @@
 .bottom-info .bottom-para {
   padding: 3%;
 }
+
+P{
+  font-family: 'Roboto', sans-serif;
+} 
+
+h2, h1 {
+  font-family: 'Seaweed Script', cursive;
+} 
+
+h3, h4,h5,h6, button{
+  font-family: 'Playfair Display', serif;
+} 
