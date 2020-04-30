@@ -1,17 +1,22 @@
 import React from 'react';
 import NavBar from './navComps/NavBar';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './nav.css';
 
 export default function Nav(props) {
   const token = localStorage.getItem('token');
+  const { push } = useHistory();
+  const logout = (e) => {
+    localStorage.clear();
+    push('/');
+  };
   return (
     <div>
       <NavBar>
         <section className='left'>
           {token ? (
             <li>
-              <Link style={styles.link} to='/user'>
+              <Link style={styles.link} to='/userpage'>
                 Home
               </Link>
             </li>
@@ -23,7 +28,7 @@ export default function Nav(props) {
             </li>
           )}
           <li>
-            <Link style={styles.link} to='public'>
+            <Link style={styles.link} to='/recipes'>
               Recipes
             </Link>
           </li>
@@ -31,7 +36,9 @@ export default function Nav(props) {
         <section className='right'>
           <li>
             {token ? (
-              <Link to='/home'>Logout</Link>
+              <Link onClick={logout} style={styles.link} to='/'>
+                Logout
+              </Link>
             ) : (
               <Link style={styles.link} to='/login'>
                 Login

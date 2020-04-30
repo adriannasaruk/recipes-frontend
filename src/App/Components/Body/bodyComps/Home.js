@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import './home.css';
 import { useHistory } from 'react-router-dom';
-import axios from 'axios';
 
 export default function Home(props) {
   const { push } = useHistory();
