@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { fetchRecipes } from '../../../../../Utils/store/Actions/recipeActions';
 import { connect } from 'react-redux';
+import UserCard from './userCard';
 
 function UserPage(props) {
   useEffect(() => {
@@ -8,10 +9,15 @@ function UserPage(props) {
   }, []);
   console.log('recipes', props.recipes);
   return (
-    <div>
+    <div className='userpage'>
+      <div className='userpage-info'>
+        <button className='add-recipe btn'>Add a Recipe</button>
+      </div>
       <div>
         {props.recipes
-          ? props.recipes.map((item) => <p> {item.title} </p>)
+          ? props.recipes.map((item) => (
+              <UserCard key={item.id} recipe={item} />
+            ))
           : null}
       </div>
     </div>

@@ -8,6 +8,7 @@ export const fetchRecipes = () => {
       .then((res) => {
         console.log(res.data);
         dispatch({ type: 'User_Recipe_Fetch_Success', payload: res.data });
-      }).catch(err => console.error({err}));
+      })
+      .catch((err) => console.error({ err }));
   };
 };

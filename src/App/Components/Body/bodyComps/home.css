@@ -92,3 +92,62 @@
 .bottom-info .bottom-para {
   padding: 3%;
 }
+
+.userpage {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.userpage div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+}
+.usercard-wrap {
+  width: 20%;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 3%;
+  margin-top: 6%;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px black;
+}
+
+.btn {
+  padding: 2%;
+  border: none;
+  background-color: #b5d7cf;
+  width: 50px;
+  color: black;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #b5d7cf;
+  background-color: black;
+}
+
+.delete {
+  margin-top: 4%;
+}
+
+.userpage .userpage-info .add-recipe {
+  width: 100px;
+  margin: 30px;
+  height: 30px;
+}
+
+.usercard-wrap .top-card,
+.usercard-wrap .ing-wrap,
+.usercard-wrap .inst-wrap {
+  margin-bottom: 4%;
+}
+.usercard-wrap .top-card {
+  display: flex;
+  flex-flow: column wrap;
+}
