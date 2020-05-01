@@ -1,7 +1,9 @@
 body {
   background-color: #e2e3d8;
 }
-.signup-btn {
+
+.signup-btn,
+button {
   background-color: #b5d7cf;
   border: none;
   color: white;
@@ -14,6 +16,10 @@ body {
 }
 
 .signup-btn:hover {
+  color: #b5d7cf;
+  background-color: black;
+}
+button:hover {
   color: #b5d7cf;
   background-color: black;
 }
@@ -47,12 +53,14 @@ input {
 label {
   margin-bottom: 5%;
 }
-.signupForm {
+.signupForm,
+.addRecipe {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.addRecipe,
 .signupForm form {
   display: flex;
   flex-flow: column wrap;
@@ -78,4 +86,12 @@ label {
 .tos-text {
   width: 80%;
   margin-left: -30%;
+}
+
+textarea {
+  resize: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 100px;
+  padding: 1%;
 }

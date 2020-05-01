@@ -146,9 +146,11 @@
 }
 
 .userpage .userpage-info .add-recipe {
-  width: 140px;
+  width: 105px;
   padding: 1%;
+
   margin: 30px;
+  /* height: 50px; */
   /* height: 30px; */
 }
 
