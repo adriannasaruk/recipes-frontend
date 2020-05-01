@@ -9,7 +9,10 @@ function UserCard(props) {
       .delete(
         `https://secretfamilyrecipes1.herokuapp.com/api/recipes/${props.recipe.id}`
       )
-      .then((res) => console.log({ res }))
+      .then((res) => {
+        console.log({ res });
+        window.location.reload();
+      })
       .catch((err) => console.error({ err }));
   };
 

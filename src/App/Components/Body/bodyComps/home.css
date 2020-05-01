@@ -96,6 +96,10 @@
   padding: 3%;
 }
 
+.userpage-info {
+  width: 100%;
+}
+
 .userpage {
   width: 100%;
   display: flex;
@@ -137,14 +141,17 @@
 
 .delete {
   margin-top: 4%;
-  background-color:#5a4b41;
+  background-color: #5a4b41;
   color: #b5d7cf;
 }
 
 .userpage .userpage-info .add-recipe {
-  width: 100px;
+  width: 105px;
+  padding: 1%;
+
   margin: 30px;
-  height: 30px;
+  /* height: 50px; */
+  /* height: 30px; */
 }
 
 .usercard-wrap .top-card,
@@ -157,18 +164,21 @@
   flex-flow: column wrap;
 }
 
-P,button {
+P,
+button {
   font-family: 'Roboto', sans-serif;
 }
-h4,h5,h6{
+h4,
+h5,
+h6 {
   font-family: 'Playfair Display', serif;
 }
-.header-info h1{
+.header-info h1 {
   font-size: 50px;
-  font-family:'Seaweed Script', cursive;
+  font-family: 'Seaweed Script', cursive;
 }
 
-.usercard-wrap{
+.usercard-wrap {
   background-color: #b5d7cf;
-  color:#5a4b41;
+  color: #5a4b41;
 }
