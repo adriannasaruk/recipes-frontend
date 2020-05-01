@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './singup.css';
 
 export default function AddRecipe(props) {
   const [state, setState] = useState({
@@ -28,7 +29,9 @@ export default function AddRecipe(props) {
   };
 
   return (
+    <div className='signupForm'>
     <form onSubmit={subRecipe} className='addRecipe'>
+      <h3>Add New Recipes Here</h3>
       <label htmlFor='title'>
         <input
           type='text'
@@ -67,5 +70,6 @@ export default function AddRecipe(props) {
       </label>
       <button>Submit</button>
     </form>
+    </div>
   );
 }
