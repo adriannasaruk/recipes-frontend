@@ -31,6 +31,7 @@ export default function AddRecipe(props) {
   return (
     <div className='signupForm'>
     <form onSubmit={subRecipe} className='addRecipe'>
+      <h3>Add New Recipes Here</h3>
       <label htmlFor='title'>
         <input
           type='text'
